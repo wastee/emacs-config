@@ -1,0 +1,12 @@
+[submodule "remote-lisp/use-package"]
+	path = remote-lisp/use-package
+	url = https://github.com/jwiegley/use-package.git
+[submodule "remote-lisp/auto-save"]
+	path = remote-lisp/auto-save
+	url = https://github.com/manateelazycat/auto-save
+[submodule "remote-lisp/evil-leader"]
+	path = remote-lisp/evil-leader
+	url = https://github.com/cofi/evil-leader.git
+[submodule "remote-lisp/awesome-pair"]
+	path = remote-lisp/awesome-pair
+	url = https://github.com/manateelazycat/awesome-pair
