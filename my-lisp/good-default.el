@@ -38,5 +38,16 @@
 ;; 保存命令历史
 (savehist-mode 1)
 
+;; 高亮 pair
+(show-paren-mode 1)
+;; highlight brackets
+(setq show-paren-style 'parenthesis)
+;; highlight entire expression
+(setq show-paren-style 'expression)
+;; highlight brackets if visible, else entire expression
+(setq show-paren-style 'mixed)
+
+
+
 ;; provide
 (provide 'good-default)
