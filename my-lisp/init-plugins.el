@@ -249,7 +249,25 @@
   :hook ((c-mode c++-mode objc-mode cuda-mode) .
          (lambda () (require 'ccls) (lsp))))
 
+;; Enable eshell-toggle
+(use-package eshell-toggle
+  :ensure t
+  :custom
+  (eshell-toggle-size-fraction 3)
+  (eshell-toggle-default-directory "/home/tee/")
+  (eshell-toggle-use-projectile-root t)
+  (eshell-toggle-run-command nil)
+  (eshell-toggle-init-function #'eshell-toggle-init-ansi-term)
+  :bind
+  ("C-`" . eshell-toggle))
 
+;; Enable projectile
+(use-package projectile
+  :ensure t
+  :init
+  (projectile-mode +1)
+  :bind-keymap
+  ("C-c p" . projectile-command-map))
 
 ;; provide
 (provide 'init-plugins)
