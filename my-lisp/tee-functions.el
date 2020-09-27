@@ -39,6 +39,11 @@ Version 2019-11-04"
          (lambda ($fpath) (let ((process-connection-type nil))
                             (start-process "" nil "xdg-open" $fpath))) $file-list))))))
 
+;; delete not yank
+(defun bb/evil-delete-char (orig-fn beg end &optional type _ &rest args)
+    (apply orig-fn beg end type ?_ args))
+(advice-add 'evil-delete-char :around 'bb/evil-delete-char)
+
 
 ;; provide
 (provide 'tee-functions)

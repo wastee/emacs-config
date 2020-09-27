@@ -1,5 +1,6 @@
 ;; All packages use the use-package mode
 (require 'use-package)
+(require 'tee-functions)
 
 ;; Enable Evil
 (use-package evil
@@ -26,7 +27,7 @@
       "r" 'recentf-open-files
       "b" 'switch-to-buffer
       "k" 'kill-buffer
-      "d" 'delete-region
+      ;;"d" 'evil-delete-char
       "qq" 'save-buffers-kill-terminal)
 
   )
