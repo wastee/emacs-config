@@ -269,5 +269,14 @@
   :bind-keymap
   ("C-c p" . projectile-command-map))
 
+;; Enable lua-mode
+(use-package lua-mode
+  :ensure t
+  :config
+  (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+  (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+  (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+  )
+
 ;; provide
 (provide 'init-plugins)
