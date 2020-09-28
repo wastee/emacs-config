@@ -4,6 +4,7 @@
 
 ;; insert-mode 里 C-v 粘贴
 (define-key evil-insert-state-map "\C-v" 'yank)
+(define-key evil-insert-state-map "\C-a" 'mark-whole-buffer)
 
 
 ;; provide
