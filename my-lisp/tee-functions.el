@@ -44,6 +44,26 @@ Version 2019-11-04"
     (apply orig-fn beg end type ?_ args))
 (advice-add 'evil-delete-char :around 'bb/evil-delete-char)
 
+;; new empty buffer
+(defun xah-new-empty-buffer ()
+  "Create a new empty buffer.
+New buffer will be named “untitled” or “untitled<2>”, “untitled<3>”, etc.
+
+It returns the buffer (for elisp programing).
+
+URL `http://ergoemacs.org/emacs/emacs_new_empty_buffer.html'
+Version 2017-11-01"
+  (interactive)
+  (let (($buf (generate-new-buffer "untitled")))
+    (switch-to-buffer $buf)
+    (funcall initial-major-mode)
+    (setq buffer-offer-save t)
+    $buf
+    ))
+
+;; set the default mode
+(setq initial-major-mode (quote text-mode))
+
 
 ;; provide
 (provide 'tee-functions)
